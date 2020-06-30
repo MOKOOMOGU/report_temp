@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <title>R5 Logcenter Installation</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container border">
+        <div class="jumbotron" align="center">
+            <h1 class="display-3">Logcenter Installation</h1>
+            <p class="lead">실습 과정 보고서</p>
+            <hr class="my-2">
+            <p class="lead">by 구병모 연구원</p>
+        </div>
+        <h1 class="display-4">Environments</h1>
+        <ul>
+            <li>오라클 버추얼박스</li>
+            <li>대여용 유휴서버</li>
+        </ul>
+        <h1 class="display-4">Video Clips of Installation</h1>
+        <ul>
+            <li>CentOS6.1 설치 과정(오라클 VM)</li>
+            <li style="list-style:none;">
+                <video src="CentOS_on_VBox.mp4" controls width="540px"></video>
+            </li>
+            <li style="list-style:none;">
+                실제로 RAID구성을 할 수 없어, Software Raid를 진행하였음
+            </li>
+            <li style="list-style:none;">
+                유휴서버에 구성 할 때에는, 실제로 레이드 설정 이후에 OS설치 단계에 들어갔음
+            </li>
+            <li style="list-style: none;">
+                오라클 VM은 192.168.1.166, 유휴서버는 192.168.1.167
+            </li>
+            <li style="list-style: none;">
+                반디캠으로 촬영, 무료버전이라 시간 체크하면서 촬영함
+            </li>
+            <p></p>
+            <li>Logcenter5.0설치과정 및 설치경과(오라클 VM)</li>
+            <li style="list-style: none;"><strong>오류1: 시스템언어설정 오류</strong></li>
+            <video src="Logcenter설치_실패_언어설정오류.mp4" controls width="540px"></video>
+            <li style="list-style: none;">
+                설치단계에서 분명히 한국어로 선택했는데도, 인코딩이 맞지 않아 로그센터 설치 실패
+            </li>
+            <li style="list-style: none;">
+                <code>LANG:ko_KR-UTF-8</code> 명령어로 해결
+            </li>
+            <p></p>
+            <li style="list-style: none;">
+                <strong>오류2:시스템 용량 부족</strong>
+            </li>
+            <video src="Logcenter설치_실패_용량부족.mp4" controls width="540px"></video>
+            <li style="list-style: none;">
+                물리적인 용량이 부족한 케이스라, VM에서의 설치 진행 중단, 유휴서버에서 작업
+            </li>
+            <li style="list-style: none;">
+                유휴서버에서는, 모든 부분들을 스크린샷 하기 전에 설치를 마무리 하여, 작동 상태 확인 영상만 있음
+            </li>
+            <p></p>
+            <li>Logcenter5.0설치경과(유휴서버)</li>
+            <video src="Logcenter설치_167번서버_작동확인.mp4" controls width="540px"></video>
+        </ul>
+        <div class="card-footer">
+            <i class="fa fa-copyright" aria-hidden="true">&copy; 구병모 연구원</i>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
