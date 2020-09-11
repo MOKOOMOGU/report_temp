@@ -1,0 +1,100 @@
+real field	Grok Dictionary	비고
+log_time	LOG_TIME	yyyyMMddHHmmss
+pri	PRI	(NUMBER)
+src_ip	SRC_IP	(IPV4)
+		* IP가 아닌 '-' , '?.?.?.?', {user_ip}가 있을 경우  있음.
+src_port	SRC_PORT	* IP가 아닌 '-', '?.?.?.?', {user_port} 가 있을 경우  있음.
+dst_ip	DST_IP	* 값이 없는 경우 존재 dst= (VPN_SSL)
+		(IPV4)
+dst_port	DST_PORT	
+event_id	EVENT_ID	(DATA)
+event_name	EVENT_NAME	(DATA)
+type	TYPE	(DATA)
+		service=tcp/port:8601
+protocol	PROTOCOL	(WORD)
+		* HTTP/1.1
+		proto=숫자
+		proto=0/ICMP
+		proto=22/tcp
+		proto=udp
+		proto= src=127.0.0.1
+		HTTP/1.1
+interface	INTERFACE	(GREEDYDATA)
+recv_pkt	RECV_PKT	* 값이 없는 경우 존재 recv= (VPN_SSL)
+		(NUMBER)
+recv_size	RECV_SIZE	(NUMBER)
+sent_pkt	SENT_PKT	* 값이 없는 경우 존재 sent= (VPN_SSL)
+		(NUMBER)
+sent_size	SENT_SIZE	(NUMBER)
+file_path	FILE_PATH	(DATA)
+file_size	FILE_SIZE	(NUMBER)
+url	URL	(DATA)
+level	LEVEL	(WORD)
+src_mac	SRC_MAC	(MAC)
+real field	Grok Dictionary	비고
+user_id	USER_ID	(DATA)
+connect_type	CONNECT_TYPE	(DATA)
+status	STATUS	(DATA)
+start_time	START_TIME	2017-03-24 14:27
+		02/08/2017
+		2014-12-15 0:46
+end_time	END_TIME	
+duration	DURATION	
+message	MESSAGE	(DATA)
+direction	DIRECTION	(WORD)
+count	COUNT	(NUMBER)
+sender	SENDER	(EMAIL)
+receiver	RECEIVER	(EMAIL)
+receiver2		(EMAIL)
+title	TITLE	(DATA)
+method	METHOD	(WORD)
+		* tcp/port
+emp_code	EMP_CODE	(WORD)
+position	POSITION	(WORD)
+emp_type	EMP_TYPE	(WORD)
+mail	MAIL	(EMAIL)
+name	NAME	(DATA)
+file_name	FILE_NAME	(DATA)
+real field	Grok Dictionary	비고
+table_name	TABLE_NAME	(DATA)
+db_name	DB_NAME	(DATA)
+user_name	USER_NAME	(DATA)
+emp_name	EMP_NAME	(DATA)
+dept_name	DEPT_NAME	(DATA)
+app_name	APP_NAME	(DATA)
+tmp	TMP	(DATA)
+tmp2		(DATA)
+tmp3		(DATA)
+tmp4		(DATA)
+tmp5		(DATA)
+record_number	(NUMBER)
+computer_name	(DATA)
+source_name	(DATA)
+log_name	LOG_NAME	(DATA)
+host_id	HOST_ID	(DATA)
+unit_id	UNIT_ID	(DATA)
+dfi_code	DFI_CODE	(DATA)
+dfi_name	DFI_NAME	(DATA)
+sm_type	SM_TYPE	(DATA)
+host_ip	HOST_IP	(IPV4)
+		* {user_ip} 일 때도 있음.
+host_name	HOST_NAME	(DATA)
+isextgbn	ISEXTGBN	0/1 또는 Y/N
+isworkgbn	ISWORKGBN	0/1 또는 Y/N
+levelno	LEVELNO	(NUMBER)
+facilityno	FACILITYNO	(NUMBER)
+data	DATA	(DATA)
+object_name	OBJECT_NAME	(DATA)
+구분자	SPACE	(SPACE)
+	TAB	
+	EOL	
+파싱하지 않는 데이터	SKIP	(DATA)
+	SKIP_NUMBER	SYSTEM_AIX > AIX7 : "from 1{user_ip}" 중 {user_ip}를 추출하기 위해.
+real field	Grok Dictionary	비고
+	DATE_FORMAT1	yyyy-MM-dd HH:mm:ss
+		yyyy/MM/dd HH:mm:ss
+	DATE_FORMAT2	dd/Mon/yyyy:HH:mm:ss
+	DATE_FORMAT3	Mon dd HH:mm:ss
+	DATE_FORMAT4	HH시간mm분ss초
+	DATE_FORMAT5	dd/MM/yyyy
+		dd-MM-yyyy
