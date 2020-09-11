@@ -24,7 +24,7 @@ function copyData(){
 }
 
 function regularize(){
-    var str = $("#log").val();
+    var str = $("#work").val();
     str = str.replace(/\\/g, "\\\\");
     str = str.replace(/\[/g, "\\\\[");
     str = str.replace(/\]/g, "\\\\]");
